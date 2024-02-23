@@ -1,5 +1,5 @@
 * {
-    box-sizing: border-box;
+    box-sizing: border-box; /* kutuların boyutunu belirlerken içeriği, dolguyu ve kenarlığı birlikte dikkate alır*/
 }
 
 body {
@@ -11,14 +11,14 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    overflow: hidden;
+    overflow: hidden; /*elementin içeriğinin taşması durumunda taşan kısmı gizler ve dışarıya sızmasını engeller*/
 }
 
 /*-------------------Cards-------------------------*/
 
 .container{
     display: flex;
-    width: 90vw;
+    width: 90vw;/*90vw" ifadesi, görünür görüntüleme alanının genişliğinin %90'ını temsil eder.*/
 }
 
 .panel {
@@ -27,7 +27,7 @@ body {
     background-repeat: no-repeat;
     height: 80vh;
     border-radius: 50px;
-    cursor: pointer;
+    cursor: pointer; /*fare imlecini belirtilen öğe üzerine geldiğinde bir el (veya işaretçi) simgesine dönüştürür.*/
     flex: 0.5;
     margin: 10px;
     position: relative;
@@ -48,17 +48,8 @@ body {
 }
 
 .panel.active h3 {
-    text-decoration: underline;
+    text-decoration: none;
+    color: #fff;
     opacity: 1;
     transition: opacity 0.3s ease-in 0.4s;
-}
-
-@media (max-width: 600px){
-    .container{
-        width: 100vw;
-    }
-
-    .panel:nth-of-type(4),.panel:nth-of-type(5){
-        display: none;
-    }
 }
